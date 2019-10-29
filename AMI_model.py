@@ -20,8 +20,8 @@ UTC = pytz.utc
 LAT_DEGREES = 40.59541667  # Set for Fort Collins (all systems)
 LONG_DEGREES = -105.0844   # Same
 ALT = 1525                 # elevation
-UNAME = 'wendells'
-PASSWORD = 'wendells!'
+UNAME = #need to fill in with access login
+PASSWORD = #need to fill in with access login
 dayNow = time.strftime("%m-%d-%Y")
 
 # set up DB connection
