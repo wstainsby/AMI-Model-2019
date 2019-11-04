@@ -25,7 +25,7 @@ PASSWORD = #need to fill in with access login
 dayNow = time.strftime("%m-%d-%Y")
 
 # set up DB connection
-connStr = "postgresql://{username}:{password}@eecl-prop.research.colostate.edu/FCUtil4".format(username=UNAME, password=PASSWORD)
+connStr = #connection to the database
 print('Connected to DB')
 conn = p2.connect(connStr)
 
@@ -36,7 +36,7 @@ batteryList = ['14871','14873','22653','25248','30545','30607','34323','44250','
 resRateCodes = ['A100', 'A115', 'A125', 'A130', 'A140', 'B140', 'E100', 'E110',
                 'E115', 'E120', 'E125', 'E130', 'E135', 'E140']
 
-DGassets = pd.read_csv('inputs/DGassets2019.csv')
+DGassets = pd.read_csv('inputs/...) #a list of DG assets
 DGassets['dateInstalled'] = pd.to_datetime(DGassets.installDate, infer_datetime_format=True)
 DGassets = DGassets.sort_values('premiseID', ascending=True)
 earlyAssets = DGassets[DGassets['dateInstalled'].dt.year < 2016]
@@ -188,7 +188,7 @@ day_offset = 20 #buffer around PV install date
 
 print("Done with PVL")
 
-with open('../Datasets/outputSums15minDay1.csv', "w") as oFile:
+with open('../output/outputSums15minDay.csv', "w") as oFile:
     csvW = csv.writer(oFile)
     csvW.writerow(['premID', 'AMI', 'PVL', 'systemCapacity', 'tilt', 'azimuth', 'installDate', 'rateCode',
                    'estErrorMedian', 'estErrorMean', 'WHerrorMedian', 'WHerrorMean','tsPercentage', 'numOutputOverages', 'percentIrregular'])
